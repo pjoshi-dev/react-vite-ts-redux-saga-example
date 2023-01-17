@@ -1,5 +1,5 @@
 # ReactJs | vite | ts | redux-saga example
-This is basic scaffoling of Reactjs with TypeScript using Vite and Redux Saga
+This is basic scaffolding of Reactjs with TypeScript using Vite and Redux Saga
 
 Install dependencies 
 
