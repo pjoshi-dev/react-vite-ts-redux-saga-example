@@ -1,0 +1,36 @@
+import { useState } from 'react';
+
+// Application
+import reactLogo from './assets/react.svg';
+import './App.css';
+import UserScreen from './pages/users/UserComponent';
+import AuthScreen from './pages/auth/AuthScreen';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="App">
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Lighthouse + Vite + React + TS</h1>
+      {/* <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">Click on the Vite and React logos to learn more</p> */}
+      {/* <UserScreen /> */}
+      <AuthScreen />
+    </div>
+  );
+}
+
+export default App;
