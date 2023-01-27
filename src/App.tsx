@@ -5,6 +5,7 @@ import reactLogo from './assets/react.svg';
 import './App.css';
 import UserScreen from './pages/users/UserComponent';
 import AuthScreen from './pages/auth/AuthScreen';
+import { Divider } from '@mui/material';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,7 +20,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Lighthouse + Vite + React + TS</h1>
+      <h1>Vite + React + TypeScript</h1>
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
         <p>
@@ -27,8 +28,9 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p> */}
-      {/* <UserScreen /> */}
       <AuthScreen />
+      <Divider sx={{ my: 2 }} />
+      <UserScreen />
     </div>
   );
 }

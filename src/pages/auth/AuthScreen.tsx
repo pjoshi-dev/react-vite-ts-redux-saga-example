@@ -15,7 +15,7 @@ const AuthScreen = () => {
   };
 
   return (
-    <Stack direction={'row'} justifyContent={'space-around'}>
+    <Stack direction={'row'} justifyContent={'space-evenly'}>
       <Button variant="contained" color="success" onClick={loginUser}>
         Login
       </Button>

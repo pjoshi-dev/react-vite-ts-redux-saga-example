@@ -12,7 +12,7 @@ function* loginSaga() {
       description: 'You are login successful!',
       placement: 'topRight',
     });
-    console.log('Login Successful');
+    console.log('Notify: Login Successful');
   } catch (error) {
     console.error(error);
   }

@@ -2,13 +2,21 @@ import React from 'react';
 import { Button } from '@mui/material';
 
 import { useDispatch } from 'react-redux';
+import { fetchUsersAction } from '../../store/users/action';
+import UsersTable from './UsersTable';
 
 const UserScreen = () => {
   const dispatch = useDispatch();
 
   const fetchUsersFromService = () => {
     const userId = '123';
-    dispatch({ type: 'USER_FETCH_REQUESTED', payload: { userId } });
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    dispatch(fetchUsersAction(url));
+  };
+  const fetchUsersFromServiceError = () => {
+    const userId = '123';
+    const url = '1nplaceholder.typicode.com/users';
+    dispatch(fetchUsersAction(url));
   };
 
   return (
@@ -16,6 +24,11 @@ const UserScreen = () => {
       <Button variant="contained" onClick={fetchUsersFromService}>
         Fetch users
       </Button>
+      &nbsp;
+      <Button variant="outlined" color="error" onClick={fetchUsersFromServiceError}>
+        Fetch users - Err
+      </Button>
+      <UsersTable />
     </div>
   );
 };
